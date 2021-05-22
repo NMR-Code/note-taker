@@ -27,7 +27,6 @@ class Note {
 }
 
 // Routes
-
 // =============================================================
 
 // Basic route that sends the user to the index page
