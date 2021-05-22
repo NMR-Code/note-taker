@@ -14,6 +14,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+//Class for notes
+class Note {
+    constructor(title, text) {
+        this.title = title;
+        this.text = text;
+        //Adds an unique id for the note object--Example: "3f9e5bcs-bv4e-4a8d-8k5c-bb86fdbd4brz".
+        this.id = uuidv4();
+    }
+}
+
+//Using Static Files, Body Parser, and JSON.
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 // Routes
 // =============================================================
 
