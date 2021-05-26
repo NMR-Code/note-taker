@@ -54,7 +54,7 @@ app.get("/api/notes", function(req, res) {
 });
 
 // Takes a JSON input with keys "title" and "text" and adds a new note object with that message to the db.json file
-app.post("/notes", function(req, res) {
+app.post("/api/notes", function(req, res) {
     fs.readFile(path.join(__dirname, "/db/db.json"), "utf8", function(error, response) {
         if (error) {
             console.log(error);
